@@ -185,3 +185,13 @@
       - 하지만 이 방식은 그리 추천하는 방식이 아니다.
 
   - 가장 추천하는 방식은 @Primary 방식이니 참고만 하면 될 것 같다.
+
+
+
+---
+
+
+
+- 동작 원리
+  - @Autowired는 BeanPostProccessor라는 인터페이스의 구현체인 AutowiredAnnotationBeanPostProcessor에 의해 의존성을 주입해주는 것이다.
+  - 주입하는 시점은 postProcessBeforInitialization에서 주입을 진행해준다. 이 시점은 애플리케이션 구동 중에 실행된다.
