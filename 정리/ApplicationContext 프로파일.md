@@ -1,5 +1,7 @@
 ### ApplicationContext extends EnvironmentCapable. 프로파일
 
+- ApplicationContext 상속받는 것중 EnvironmentCapable에 대해서 살펴보자
+
 - 프로파일 기능이란,
 
   - 운영을 유지보수하면서 추가적인 요구사항에서 대해 배포를 진행하게 된다면, 단계적인(local, test, stage) 서버 배포 후 최종적으로 테스트가 완료되면 운영(prd) 서버에 배포하게 된다.
