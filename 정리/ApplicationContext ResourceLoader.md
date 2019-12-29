@@ -28,7 +28,7 @@
     ```
 
     - 결과값을 확인해보면,
-    - ![1577617383938](C:\Users\user\AppData\Roaming\Typora\typora-user-images\1577617383938.png)
+    - ![1577617383938](https://user-images.githubusercontent.com/40616436/71556445-154e8480-2a7c-11ea-9630-13df1ae29419.png)
 
   - URL로 읽어오기
 
