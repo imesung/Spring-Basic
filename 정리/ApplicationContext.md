@@ -1,4 +1,4 @@
-### Application Context
+### Application Context와 여러 Bean 설정 
 
 - Application Context는 빈들을 설정하고 어디에 의존성을 주입할 건지를 정의하는 것이다.
 
