@@ -178,7 +178,7 @@
       //CustService
       public class CustService {
           @Autowired
-          CustRepository myCustRepository;	//이름으로 의존받으려는 객체를 정함
+          CustRepository myCustRepository;	//이름으로 의존받으려는 객체를 정함.
       }
       ```
 

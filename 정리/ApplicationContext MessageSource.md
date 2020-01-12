@@ -60,6 +60,6 @@
   ```
 
   - 1초 간격으로 메시지를 출력해내겠다는 소스이고 결과값은 아래와 같다
-    - ![1577612541784](C:\Users\user\AppData\Roaming\Typora\typora-user-images\1577612541784.png)
+    - ![1577612541784](https://user-images.githubusercontent.com/40616436/71556403-aa04b280-2a7b-11ea-997c-8b2f641de69c.png)
   - 그런데 여기서 서버를 중지시키지 않고 messages_ko_KR.properties를 `gretting=hello world, {0}`로 변경을 하게 되면 결과값은 신기하게도 우리가 변경했던 소스를 바로 적용하는 모습을 볼 수 있다.
-    - ![1577612637453](C:\Users\user\AppData\Roaming\Typora\typora-user-images\1577612637453.png)
+    - ![1577612637453](https://user-images.githubusercontent.com/40616436/71556405-abce7600-2a7b-11ea-839a-a0b8c4ac66d7.png)

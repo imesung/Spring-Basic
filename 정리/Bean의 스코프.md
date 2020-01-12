@@ -1,6 +1,6 @@
-### Bean의 스코프
+### Bean의 Scope
 
-- Bean의 스코프
+- Bean의 Scope
 
   - 싱글톤
 

@@ -83,7 +83,7 @@
 
   - 하나의 thread에서 동일한 Event를 사용하는 것을 볼수 있다.
 
-  - ![1577615883301](C:\Users\user\AppData\Roaming\Typora\typora-user-images\1577615883301.png)
+  - ![1577615883301](https://user-images.githubusercontent.com/40616436/71556387-614cf980-2a7b-11ea-8843-b0f449e6c0c7.png)
 
   - 만약 Event를 사용하는 핸들러의 순서가 중요하다면 순서를 정할 수가 있다.
 
@@ -106,8 +106,8 @@
           System.out.println("handler2에서 MyEvent를 받았고, 데이터는 " + myEvent.getData());
       }
       ```
-
-    - ![1577616263112](C:\Users\user\AppData\Roaming\Typora\typora-user-images\1577616263112.png)
+    -	이 처럼 우선순위를 정하게 되면 클라이언트가 정한 순서에 맞춰 출력되는 것을 확인할 수 있다.
+    - ![1577616263112](https://user-images.githubusercontent.com/40616436/71556390-64e08080-2a7b-11ea-888d-202a49cd4943.png)
 
   - 비동기적으로 실행하고 싶다면 `@Async`를 붙여서 사용하면 된다.
 
