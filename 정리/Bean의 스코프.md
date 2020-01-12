@@ -61,7 +61,7 @@
 
         - Class Prototype을 Proxy로 감싸 Class Singleton이 직접적으로 참조하지 못하게 막는 것이다.
         - why? 직접적으로 참조하게 된다면 Class Prototype이 바뀔 여지가 없기 때문이다. Class Prototype은 객체가 생성될 때마다 매번 바뀌어야 하므로!!
-        - ![1577595911138](C:\Users\user\AppData\Roaming\Typora\typora-user-images\1577595911138.png)
+        - ![1577595911138](https://user-images.githubusercontent.com/40616436/71556277-b5ef7500-2a79-11ea-8957-5e081fcaee67.png)
 
   - 싱글톤 객체 사용 시 주의할 점
 
