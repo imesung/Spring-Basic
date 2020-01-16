@@ -6,7 +6,6 @@
 
 
 
-**Bean Validation이란**
 
 
 
