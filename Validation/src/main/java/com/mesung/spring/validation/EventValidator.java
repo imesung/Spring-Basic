@@ -1,4 +1,4 @@
-package me.springkey.validation;
+package com.mesung.spring.validation;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -13,6 +13,6 @@ public class EventValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"title", "notempty", "Empty title is now allowed.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "title", "notempty", "메시지를 찾지 못했을 때의 값");
     }
 }
