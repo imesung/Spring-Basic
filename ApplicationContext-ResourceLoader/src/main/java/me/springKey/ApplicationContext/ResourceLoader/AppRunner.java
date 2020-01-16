@@ -19,13 +19,13 @@ public class AppRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        System.out.println(resourceLoader.getClass());  //WebApplicationContext이므로 기본적으로 ServletContext
+
+        Resource resource = resourceLoader.getResource("test.txt");
         System.out.println(resourceLoader.getClass());
 
-
-        Resource resource = resourceLoader.getResource("classpath:test.txt");
-
-        System.out.println(resource.getClass());
         System.out.println(resource.exists());
         System.out.println(resource.getDescription());
+
     }
 }
