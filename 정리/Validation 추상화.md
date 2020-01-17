@@ -184,7 +184,7 @@ public class AppRunner implements ApplicationRunner {
 
 1. **@Autowired Validator**를 통해 **LocalValidatorFactoryBean**을 불러와 주입한다.
 2. Event에 변수를 추가한 후 어노테이션을 통해 해당 필드값이 어떤 형식인 지 설정한다.
-   1. **@NotEmpty** : 빈값이면 안된다.
+   1. **@NotEmpty** : 빈 값이면 안된다.
    2. **@NotNull @Min(0)** : Null이면 안되고 최소값은 0이어야 한다.
    3. **@Email** : Email 형식으로 되어야 한다.
    4. @Size : 컬렉션의 사이즈를 최소 혹은 최대값을 설정해줄 수 있다.
