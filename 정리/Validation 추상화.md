@@ -198,5 +198,6 @@ public class AppRunner implements ApplicationRunner {
       3.  오류내용, 필드 타입
       4.  오류내용
       5.  오류 상세 내용
+
 **즉, LocalValidatorFactoryBean으로 통해 우리는 validator를 구현하지 않아도 간편히 validation 체크를 할 수 있는 것이다!**
 
