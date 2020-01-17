@@ -185,14 +185,18 @@ public class AppRunner implements ApplicationRunner {
 1. **@Autowired Validator**를 통해 **LocalValidatorFactoryBean**을 불러와 주입한다.
 2. Event에 변수를 추가한 후 어노테이션을 통해 해당 필드값이 어떤 형식인 지 설정한다.
    1. **@NotEmpty** : 빈값이면 안된다.
-   2. **@NotNull @Min(0)** : 빈값이면 안되고 최소값은 0이어야 한다.
+   2. **@NotNull @Min(0)** : Null이면 안되고 최소값은 0이어야 한다.
    3. **@Email** : Email 형식으로 되어야 한다.
    4. @Size : 컬렉션의 사이즈를 최소 혹은 최대값을 설정해줄 수 있다.
 3. event.set(***)를 통해서 에러를 유도해본다.
 4. **결과값을 살펴보자**
 5. ![image](https://user-images.githubusercontent.com/40616436/72533461-8ed9d580-38b8-11ea-99f9-a30e036c9b24.png)
-   1. 현재 validator가 LocalValidatorFactoryBean이라는 것을 확인할 수 있다.
+   1. 첫번째 줄에서 현재 validator가 LocalValidatorFactoryBean이라는 것을 확인할 수 있다.
    2. 각 필드가 설정한 범위 혹은 조건에 만족하지 않을 때의 에러 메시지를 출력해준다.
-
+      1. 오류내용, 클래스명, 필드명
+      2.  오류내용, 필드명
+      3.  오류내용, 필드 타입
+      4.  오류내용
+      5.  오류 상세 내용
 **즉, LocalValidatorFactoryBean으로 통해 우리는 validator를 구현하지 않아도 간편히 validation 체크를 할 수 있는 것이다!**
 
