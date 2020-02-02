@@ -143,7 +143,7 @@ public class ProxySimpleEventService implements EventService{
 }
 ~~~
 
-하지만 이 부분에도 중복되는 코드는 존재한다. 또한, SimpleEventService(Real Subject)뿐만 아니라 다른 클래스에도 proxy가 필요하다면 모두 일일이 추가해야하는 경우가 발생한다.
+**하지만 이 부분에도 중복되는 코드는 존재한다. 또한, SimpleEventService(Real Subject)뿐만 아니라 다른 클래스에도 proxy가 필요하다면 모두 일일이 추가해야하는 경우가 발생한다.**
 
 
 
