@@ -98,6 +98,24 @@
 
 
 
+**빈 가져오기(ApplicationContext 활용)**
+
+~~~java
+public static void main(String[] args) {
+    //해당 클래스(ApplicationConfig)를 빈 설정 파일로 사용한다.
+    ApplicationContext context = new AnnotationConfigApplicationContext(ApplicatoinConfig.class);
+
+    String [] beanDefinitionNames = context.getBeanDefinitionNames();
+    System.out.println(Arrays.toString(beanDefinitionNames)); 
+    //Bean 단일적으로 가져오기
+    CustService custService = (CustService) context.getBean("custService");
+}
+~~~
+
+
+
+
+
 ### Spring DI 컨테이너의 개념
 
 BeanFactory로서, Bean(POJO 객체)들을 관리한다.
