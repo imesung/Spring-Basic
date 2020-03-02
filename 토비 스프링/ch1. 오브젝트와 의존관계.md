@@ -93,6 +93,8 @@
 
 ### **관계설정 책임의 분리**
 
+UserDao를 직접적으로 수정해야하는 문제점을 해결해보자
+
 - UserDao 오브젝트와 특정 클래스로부터 만들어진 ConnectionMaker 오브젝트 사이에 관계를 설정해주는 것이다.
 
   - 클래스 사이의 관계가 만들어지는 것은 코드에 다른 클래스의 이름이 나타나 있다는 것이고, **오브젝트 사이의 관계는 해당 클래스가 구현한 인터페이스와 관계를 맺었다는 것이다.(다형성)**
@@ -107,5 +109,49 @@
 
   ![image](https://user-images.githubusercontent.com/40616436/75683933-5280fe00-5cdb-11ea-9c4c-a5a8ad5f3885.png)
 
-- 
+
+
+- **클라이언트와 같은 제 3의 오브젝트가 UserDao 오브젝트가 사용할 ConnectionMaker 오브젝트를 전달해주도록 해보자.**
+
+  - 즉, UserDao 생성자의 파라미터를 ConnectionMaker로 설정하여 클라이언트가 어떤 ConnectionMaker를 사용할지 결정하는 것이다.
+
+    ~~~java
+    //UserDao 생성자
+    public UserDao(ConnectionMaker connectionMaker) {
+      this.connectionMaker = connectionMaker;
+    }
+    
+    //Main(클라이언트)
+    public static void main(String [] args) {
+      ConnectionMaker connectionMaker = new DConnectionMaker();	//UserDao가 사용할 ConnectionMaker 구현 클래스를 결정하고 오브젝트를 만든다.
+      
+      UserDao userDao = new UserDao(connectionMaker);
+    }
+    ~~~
+
+  - 이로 인해, ConnectionMaker 인터페이스를 구현했다면 어떤 클래스로 만든 오브젝트더라도 UserDao의 생성자 파라미터로 들어오기만 하면 되므로, **UserDao는 DB 커넥션에 관련된 클래스에 관심도 없게 된다.**
+
+
+
+### 원칙과 패턴
+
+**개방 폐쇄 원칙**
+
+- 개방 폐쇄 원칙을 정의하면 **클래스나 모듈은 확장에는 열려 있어야 하고, 변경에는 닫혀 있어야 한다.**
+- 예를 들어, 우리가 리팩토링한 UserDao의 경우
+  - DB 연결 방법이라는 기능을 확장하는데는 열려 있고, 확장하는데 UserDao에 전혀 영향을 주지 않는다.
+  - UserDao 자신의 핵심 기능을 구현한 코드는 여러 변화에 영향을 받지 않고 유지할 수 있으므로 닫혀 있다고 말할 수 있다.
+- 잘 설계된 객체지향 클래스의 구조를 살펴보면 바로 이 **개방 폐쇄 원칙**을 잘 지키고 있다.
+
+
+
+**객체 지향 설계의 5가지 원칙**
+
+SOLID 원칙이라고도 한다.
+
+1. SRP : 단일 책임 원칙
+2. OCP : 개방 폐쇄 원칙
+3. LSP : 리스코프 치환 원칙
+4. ISP : 인터페이스 분리 원칙
+5. DIP : 의존관계 역전 원칙
 
